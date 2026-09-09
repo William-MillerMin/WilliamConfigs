@@ -173,6 +173,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
+        // active-color "#ff00ff"
         active-color "#7fc8ff"
 
         // Color of the ring on inactive monitors.
@@ -203,8 +204,8 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
 
 
-        width 5
-        active-color "#dddddd"
+        width 3
+        active-color "#ffffff"
         inactive-color "#505050"
 
         // Color of the border around windows that request your attention.
@@ -322,6 +323,9 @@ blur {
 }
 
 window-rule {
+    geometry-corner-radius 0
+    clip-to-geometry true
+    open-maximized false
     draw-border-with-background false
 }
 
@@ -351,6 +355,11 @@ window-rule {
 }
 
 window-rule {
+    match title="Warhammer 40,000: Boltgun - Words Of Vengeance"
+    open-maximized true
+}
+
+window-rule {
     match title=r#"is sharing your screen.$"#
     opacity 0.01
     open-focused false
@@ -369,14 +378,6 @@ window-rule {
 
     // Use this instead if you want them visible on third-party screenshot tools.
     // block-out-from "screencast"
-}
-
-// Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
-window-rule {
-    geometry-corner-radius 12
-    clip-to-geometry true
-    open-maximized false
 }
 
 binds {

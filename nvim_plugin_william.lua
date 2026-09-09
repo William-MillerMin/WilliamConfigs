@@ -1,1 +1,1 @@
-/home/william/.config/nvim/lua/plugins/william.lua
+return {}

@@ -21,6 +21,6 @@ PS1='\W '$HEART'  '
 # PS1="\[\e[46;1;100m\]< \u @ \h >\[\e[0m\] \W \$ "
 # PS1='[\u@\h \W]\$ '
 
-export PATH=$PATH:/home/william/.spicetify
+export PATH="$HOME/.cargo/bin:$PATH"
 
 eval "$(zoxide init bash)"

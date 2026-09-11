@@ -301,6 +301,11 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // You can also set this to null to disable saving screenshots to disk.
 // screenshot-path null
 
+cursor {
+    xcursor-theme "undertale-heart-v2"
+    xcursor-size 24
+}
+
 // Animation settings.
 // The wiki explains how to configure individual animations:
 // https://niri-wm.github.io/niri/Configuration:-Animations
@@ -355,7 +360,7 @@ window-rule {
 }
 
 window-rule {
-    match title="Warhammer 40,000: Boltgun - Words Of Vengeance"
+    match app-id="microsoft-edge"
     open-maximized true
 }
 

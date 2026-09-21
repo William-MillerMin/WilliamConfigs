@@ -328,7 +328,7 @@ blur {
 }
 
 window-rule {
-    geometry-corner-radius 0
+    geometry-corner-radius 9
     clip-to-geometry true
     open-maximized false
     draw-border-with-background false

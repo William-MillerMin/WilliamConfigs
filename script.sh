@@ -9,7 +9,7 @@ niri_folder_path="$HOME/.config/niri"
 nvim_folder_path="$HOME/.config/nvim"
 kitty_folder_path="$HOME/.config/kitty"
 
-task_data_folder_path="$HOME/.task"
+task_data_path="$HOME/.task"
 taskrc_path="$HOME/.taskrc"
 
 space="echo -e \n"
@@ -72,6 +72,19 @@ else
     echo "creating..." &&
         ln -fs "$will_configs_path"/taskrc "$taskrc_path" &&
         echo -e "successfully created symlink $BLUE$taskrc_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
+fi
+space
+if [[ -e $task_data_path ]]; then
+    echo -e "found$GREEN task_data$DEFAULT directory/file" &&
+        rm -fr "$task_data_path" &&
+        echo "original folder/file removed" &&
+        ln -s "$will_configs_path"/task_data "$task_data_path" &&
+        echo -e "successfully created symlink $BLUE$task_data_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
+else
+    echo -e "$GREEN task_data$DEFAULT directory isn't found"
+    echo "creating..." &&
+        ln -fs "$will_configs_path"/task_data "$task_data_path" &&
+        echo -e "successfully created symlink $BLUE$task_data_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
 fi
 
 space # BASH config

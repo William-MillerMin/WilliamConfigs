@@ -367,8 +367,7 @@ window-rule {
 window-rule {
     match title="LocalSend"
     open-focused false
-    // default-window-height { proportion 1.0; }
-    open-maximized true
+    default-window-height { proportion 1.0; }
     opacity 0.98
 }
 

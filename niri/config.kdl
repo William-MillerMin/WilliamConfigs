@@ -277,6 +277,10 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "waybar"
 spawn-at-startup "noctalia"
+spawn-at-startup "kitty"
+
+workspace "terminal"
+workspace "browser"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -317,6 +321,13 @@ animations {
     slowdown 0.7
 }
 
+overview {
+    backdrop-color "#333355"
+    workspace-shadow {
+        off
+    }
+}
+
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
@@ -336,6 +347,7 @@ window-rule {
 
 window-rule {
     match app-id="^kitty$"
+    open-on-workspace "terminal"
     background-effect {
         blur true
     }
@@ -353,6 +365,14 @@ window-rule {
 }
 
 window-rule {
+    match title="LocalSend"
+    open-focused false
+    // default-window-height { proportion 1.0; }
+    open-maximized true
+    opacity 0.98
+}
+
+window-rule {
     match app-id="steam" title="notifiation"
     baba-is-float true
     open-focused false
@@ -361,6 +381,7 @@ window-rule {
 
 window-rule {
     match app-id="microsoft-edge"
+    open-on-workspace "browser"
     open-maximized true
 }
 
@@ -553,8 +574,8 @@ binds {
     //
     // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
     // will all refer to the 3rd workspace.
-    Mod+1 { focus-workspace 1; }
-    Mod+2 { focus-workspace 2; }
+    Mod+1 { focus-workspace "terminal"; }
+    Mod+2 { focus-workspace "browser"; }
     Mod+3 { focus-workspace 3; }
     Mod+4 { focus-workspace 4; }
     Mod+5 { focus-workspace 5; }

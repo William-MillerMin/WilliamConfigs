@@ -24,12 +24,12 @@ if [[ -e $niri_folder_path ]]; then
         rm -fr "$niri_folder_path" &&
         echo "original folder/file removed" &&
         ln -s "$will_configs_path"/niri "$niri_folder_path" &&
-        echo -e "successfully created symlink $BLUE$niri_folder_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
+        echo -e "successfully created symlink $BLUE$niri_folder_path$DEFAULT -> $CYAN$will_configs_path/niri$DEFAULT"
 else
     echo -e "niri$GREEN directory$DEFAULT isn't found"
     echo "creating..." &&
         ln -fs "$will_configs_path"/niri "$niri_folder_path" &&
-        echo -e "successfully created symlink $BLUE$niri_folder_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
+        echo -e "successfully created symlink $BLUE$niri_folder_path$DEFAULT -> $CYAN$will_configs_path/niri$DEFAULT"
 fi
 
 space # NVIM config
@@ -38,12 +38,12 @@ if [[ -e $nvim_folder_path ]]; then
         rm -fr "$nvim_folder_path" &&
         echo "original folder/file removed" &&
         ln -s "$will_configs_path"/nvim "$nvim_folder_path" &&
-        echo -e "successfully created symlink $BLUE$nvim_folder_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
+        echo -e "successfully created symlink $BLUE$nvim_folder_path$DEFAULT -> $CYAN$will_configs_path/nvim$DEFAULT"
 else
     echo -e "$GREEN nvim$DEFAULT directory isn't found"
     echo "creating..." &&
         ln -fs "$will_configs_path"/nvim "$nvim_folder_path" &&
-        echo -e "successfully created symlink $BLUE$nvim_folder_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
+        echo -e "successfully created symlink $BLUE$nvim_folder_path$DEFAULT -> $CYAN$will_configs_path/nvim$DEFAULT"
 fi
 
 space # KITTY config
@@ -52,39 +52,12 @@ if [[ -e $kitty_folder_path ]]; then
         rm -fr "$kitty_folder_path" &&
         echo "original folder/file removed" &&
         ln -s "$will_configs_path"/kitty "$kitty_folder_path" &&
-        echo -e "successfully created symlink $BLUE$kitty_folder_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
+        echo -e "successfully created symlink $BLUE$kitty_folder_path$DEFAULT -> $CYAN$will_configs_path/kitty$DEFAULT"
 else
     echo -e "$GREEN kitty$DEFAULT directory isn't found"
     echo "creating..." &&
         ln -fs "$will_configs_path"/kitty "$kitty_folder_path" &&
-        echo -e "successfully created symlink $BLUE$kitty_folder_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
-fi
-
-space # TASK config
-if [[ -e $taskrc_path ]]; then
-    echo -e "found$GREEN task$DEFAULT directory/file" &&
-        rm -fr "$taskrc_path" &&
-        echo "original folder/file removed" &&
-        ln -s "$will_configs_path"/taskrc "$taskrc_path" &&
-        echo -e "successfully created symlink $BLUE$taskrc_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
-else
-    echo -e "$GREEN task$DEFAULT directory isn't found"
-    echo "creating..." &&
-        ln -fs "$will_configs_path"/taskrc "$taskrc_path" &&
-        echo -e "successfully created symlink $BLUE$taskrc_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
-fi
-space
-if [[ -e $task_data_path ]]; then
-    echo -e "found$GREEN task_data$DEFAULT directory/file" &&
-        rm -fr "$task_data_path" &&
-        echo "original folder/file removed" &&
-        ln -s "$will_configs_path"/task_data "$task_data_path" &&
-        echo -e "successfully created symlink $BLUE$task_data_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
-else
-    echo -e "$GREEN task_data$DEFAULT directory isn't found"
-    echo "creating..." &&
-        ln -fs "$will_configs_path"/task_data "$task_data_path" &&
-        echo -e "successfully created symlink $BLUE$task_data_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
+        echo -e "successfully created symlink $BLUE$kitty_folder_path$DEFAULT -> $CYAN$will_configs_path/kitty$DEFAULT"
 fi
 
 space # BASH config
@@ -93,12 +66,12 @@ if [[ -e $bashrc_path ]]; then
         rm -fr "$bashrc_path" &&
         echo "original folder/file removed" &&
         ln -s "$will_configs_path"/bashrc "$bashrc_path" &&
-        echo -e "successfully created symlink $BLUE$bashrc_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
+        echo -e "successfully created symlink $BLUE$bashrc_path$DEFAULT -> $CYAN$will_configs_path/bashrc$DEFAULT"
 else
     echo -e "$GREEN bash$DEFAULT directory isn't found"
     echo "creating..." &&
         ln -fs "$will_configs_path"/bashrc "$bashrc_path" &&
-        echo -e "successfully created symlink $BLUE$bashrc_path$DEFAULT -> $CYAN$will_configs_path$DEFAULT"
+        echo -e "successfully created symlink $BLUE$bashrc_path$DEFAULT -> $CYAN$will_configs_path/bashrc$DEFAULT"
 fi
 
 space

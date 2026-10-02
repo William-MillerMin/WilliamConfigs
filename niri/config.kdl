@@ -277,9 +277,7 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "waybar"
 spawn-at-startup "noctalia"
-spawn-at-startup "kitty"
 
-workspace "terminal"
 workspace "browser"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -347,7 +345,6 @@ window-rule {
 
 window-rule {
     match app-id="^kitty$"
-    open-on-workspace "terminal"
     background-effect {
         blur true
     }
@@ -573,7 +570,7 @@ binds {
     //
     // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
     // will all refer to the 3rd workspace.
-    Mod+1 { focus-workspace "terminal"; }
+    Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace "browser"; }
     Mod+3 { focus-workspace 3; }
     Mod+4 { focus-workspace 4; }
